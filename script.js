@@ -1,13 +1,19 @@
-const letters = {
-	2:'abc', 3:'def', 4:'ghi', 5:'jkl',
-	6:'mno', 7:'pqrs', 8:'tuv', 9:'wxyz'
-}
+
+function letterCombinations(input_digit) {
+  //Complete the function
+	const letters = {
+		2:'abc',
+		3:'def',
+		4:'ghi',
+		5:'jkl',
+		6:'mno',
+		7:'pqrs',
+		8:'tuv',
+		9:'wxyz'
+	}
 
 let res = [];
-
-function letterCombinations(input_digit, index, resStr) {
-  //Complete the function
-
+function solve(index, resStr){
 	if(input_digit.length<=index){
 		res.push(resStr);
 		return;
@@ -18,7 +24,8 @@ function letterCombinations(input_digit, index, resStr) {
 	for(let i=0;i<str.length;i++){
 		letterCombinations(input_digit,index+1,resStr+str[i]);
 	}
-
+}
+	solve(0,"");
 	return res;
 }
 
