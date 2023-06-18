@@ -22,7 +22,7 @@ function solve(index, resStr){
 	let num = input_digit[index];
 	let str = letters[num];
 	for(let i=0;i<str.length;i++){
-		letterCombinations(input_digit,index+1,resStr+str[i]);
+		solve(index+1,resStr+str[i]);
 	}
 }
 	solve(0,"");
