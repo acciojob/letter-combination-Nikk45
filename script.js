@@ -18,9 +18,11 @@ function letterCombinations(input_digit, index, resStr) {
 	for(let i=0;i<str.length;i++){
 		letterCombinations(input_digit,index+1,resStr+str[i]);
 	}
-	
+
+	return res;
 }
 
-letterCombinations("23", 0, "");
-alert(res);
+
+// letterCombinations("23", 0, "");
+// alert(res);
 module.exports = letterCombinations;
